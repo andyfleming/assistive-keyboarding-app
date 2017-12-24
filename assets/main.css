@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background: black;
+    color: white;
+    /* http://www.aph.org/products/aphont/download/ */
+    font-family: "APHont", "Helvetica", "Arial", sans-serif;
+    font-weight: bold;
+}
+
+#key {
+    margin: 10vh auto 0px auto;
+    font-size: 80vh;
+    text-align: center;
+}
+
+#key.s {
+    font-size: 55vh;
+}
+
+#key.xs {
+    font-size: 40vh;
+}
