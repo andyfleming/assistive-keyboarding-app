@@ -2,6 +2,9 @@ const synth = window.speechSynthesis
 const allVoices = synth.getVoices()
 const maleVoice = allVoices.filter(v => v.name === 'Alex')[0]
 const femaleVoice = allVoices.filter(v => v.name === 'Samantha')[0]
+
+const dingAudio = new Audio('correct.mp3');
+
 const uppercaseKeys = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
 const lowercaseKeys = 'abcdefghijklmnopqrstuvwxyz'.split('')
 const digits = '0123456789'.split('')
@@ -111,8 +114,17 @@ function logKeyboardEvent(e) {
     console.log(`Key: ${e.key}     | Code: ${e.code}     | KeyCode: ${e.keyCode}`)
 }
 
-window.addEventListener('keydown', e => e.preventDefault())
-window.addEventListener('keydown', logKeyboardEvent)
-window.addEventListener('keydown', displayKey)
-window.addEventListener('keydown', announceKey)
+function playDing() {
+    dingAudio.play()
+}
 
+function runKeyboardExplorer() {
+    window.addEventListener('keydown', e => e.preventDefault())
+    window.addEventListener('keydown', logKeyboardEvent)
+    window.addEventListener('keydown', displayKey)
+    window.addEventListener('keydown', announceKey)    
+}
+
+function runKeyQuizzer() {
+
+}
