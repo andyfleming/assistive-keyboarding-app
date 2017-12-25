@@ -3,12 +3,16 @@
     padding: 0;
 }
 
-html, body {
+body {
     background: black;
     color: white;
     /* http://www.aph.org/products/aphont/download/ */
     font-family: "APHont", "Helvetica", "Arial", sans-serif;
     font-weight: bold;
+}
+
+body.correct {
+    background: #37b352;
 }
 
 #key {

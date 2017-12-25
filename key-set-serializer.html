@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="assets/main.css" />
+    </head>
+    <body>
+        <div id="key"></div>
+        <script src="assets/main.js"></script>
+        <script>
+            let keyEvents = new Map()
+
+            window.addEventListener('keydown', function serializeEvent({altKey, code, ctrlKey, key, keyCode, shiftKey, which}) {
+                keyEvents.set(key, {altKey, code, ctrlKey, key, keyCode, shiftKey, which})
+                
+                let keyNames = []
+
+                for (let item of keyEvents.values()) {
+                    keyNames.push(item.key)
+                }
+
+                console.log(keyNames.join(','))
+            })
+
+            function serializeKeyEvents() {
+                let values = []
+
+                for (let item of keyEvents.values()) {
+                    values.push(item)
+                }
+                console.log('JSON.stringify(values)')
+                console.log(JSON.stringify(values))
+            }
+
+        </script>
+    </body>
+</html>
