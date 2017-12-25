@@ -20,6 +20,7 @@ const specialPronunciations = {
     '}': 'right french bracket',
     '|': 'vertical bar',
     ':': 'colon',
+    "'": 'apostrophe',
     '"': 'double quote',
     '<': 'less than',
     '>': 'greater than',
